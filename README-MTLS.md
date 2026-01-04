@@ -57,6 +57,10 @@ openssl x509 -req -in redis-client.csr -CA ca.crt -CAkey ca.key -CAcreateserial 
 
 ## Final Files and Their Distribution
 
+The CA does not require its private key (ca.key) at runtime; it is only needed to sign server and client certificates during setup. 
+
+At runtime, both the Redis server and clients must retain their own private keys to prove `ownership` of their respective certificates during [the TLS handshake](https://www.cloudflare.com/learning/access-management/what-is-mutual-tls/). This allows each party to authenticate itself and establish a secure, encrypted connection, while the CA’s public certificate (ca.crt) is used by both sides to verify the authenticity of the presented certificates.
+
 ``` shell
 # The most sensitive file, and it must be kept secure
 ca.key
