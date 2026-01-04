@@ -65,7 +65,7 @@ At runtime, both the Redis server and clients must retain their own private keys
 # The most sensitive file, and it must be kept secure
 ca.key
 
-# Root CA certificate shared by Redis server and clients to verify the authenticity of server and client  certificates
+# Root CA certificate shared by Redis server and clients to verify the authenticity of server and client certificates
 ca.crt
 
 # For Redis server 
