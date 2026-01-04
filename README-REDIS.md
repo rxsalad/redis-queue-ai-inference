@@ -22,7 +22,7 @@ redis-client.crt
 redis-client.key
 ```
 
-Copy the Redis server’s TLS certificate and private key files to the target directory:
+Copy the Redis server’s certificate and private key files to the target directory:
 
 ``` shell
 cp ca.crt redis-server.crt redis-server.key /etc/redis
@@ -113,4 +113,4 @@ rq.rshue.com:6379>
 rq.rshue.com:6379> type list_clients # Returns the data type
 rq.rshue.com:6379>
 rq.rshue.com:6379> exit
-``` shell
+```
