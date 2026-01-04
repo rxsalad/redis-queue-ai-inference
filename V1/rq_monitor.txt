@@ -1,0 +1,422 @@
+################################################## python3 rq_monitor.py 
+
+The Redis Queue Manager is initialized.
+
+----------------------------------------> Test: ping
+True
+
+----------------------------------------> Queue Info:
+{'pending': 14, 'completed': 493, 'failed': 335}
+
+----------------------------------------> Clients and Servers:
+----------> Clients:
+b'{"client_id": "client_3284", "timestamp": "2026-01-04 10:52:44.247085-08:00"}'
+b'{"client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.638358-08:00"}'
+b'{"client_id": "client_8987", "timestamp": "2026-01-04 10:32:47.052247-08:00"}'
+b'{"client_id": "client_961", "timestamp": "2026-01-04 10:07:17.232791-08:00"}'
+b'{"client_id": "client_7920", "timestamp": "2026-01-04 10:07:01.601270-08:00"}'
+b'{"client_id": "client_4461", "timestamp": "2026-01-04 09:54:51.428782-08:00"}'
+b'{"client_id": "client_385", "timestamp": "2026-01-04 09:53:19.793511-08:00"}'
+b'{"client_id": "client_9952", "timestamp": "2026-01-04 09:51:14.800639-08:00"}'
+b'{"client_id": "client_6154", "timestamp": "2026-01-04 09:50:55.041223-08:00"}'
+b'{"client_id": "client_4223", "timestamp": "2026-01-04 09:26:25.241928-08:00"}'
+b'{"client_id": "client_3861", "timestamp": "2026-01-04 09:25:46.633569-08:00"}'
+b'{"client_id": "client_4481", "timestamp": "2026-01-04 09:24:30.654318-08:00"}'
+b'{"client_id": "client_7726", "timestamp": "2026-01-04 09:16:03.854948-08:00"}'
+b'{"client_id": "client_842", "timestamp": "2026-01-04 09:15:55.958417-08:00"}'
+b'{"client_id": "client_5482", "timestamp": "2026-01-04 09:15:32.895640-08:00"}'
+b'{"client_id": "client_3177", "timestamp": "2026-01-04 09:15:27.640590-08:00"}'
+b'{"client_id": "client_8030", "timestamp": "2026-01-04 09:14:55.760158-08:00"}'
+----------> Servers:
+b'{"server_id": "server_1995", "timestamp": "2026-01-04 10:52:04.894830-08:00"}'
+b'{"server_id": "server_5319", "timestamp": "2026-01-04 09:53:11.419885-08:00"}'
+b'{"server_id": "server_2714", "timestamp": "2026-01-04 09:53:06.784548-08:00"}'
+b'{"server_id": "server_980", "timestamp": "2026-01-04 09:42:04.541822-08:00"}'
+b'{"server_id": "server_4952", "timestamp": "2026-01-04 09:41:58.095932-08:00"}'
+b'{"server_id": "server_8795", "timestamp": "2026-01-04 09:14:49.907689-08:00"}'
+b'{"server_id": "server_2874", "timestamp": "2026-01-04 09:14:47.250026-08:00"}'
+
+----------------------------------------> list_task:
+----> list_task:99375daf-33a1-4c9a-8a90-549236162bb1_92:
+----> list_task:2f2c2a03-bcf5-4c60-b08c-8898ad4cb212_96:
+----> list_task:4765fd68-57c2-4a0b-93f3-56af55248f5e_90:
+----> list_task:22cd5f85-f17f-4b2b-be7a-c8e1488f91c1_94:
+----> list_task:950d4344-1148-4748-9a7e-202a5fe35fc4_93:
+----> list_task:da2e8785-724b-44ba-ac05-417ac11a1839_95:
+----> list_task:76650f46-f1b6-4ccd-a5c5-dc58ee3d10b5_100:
+----> list_task:875067f6-bd31-4d7c-b0af-5c4c52fbbc7d_97:
+----> list_task:b6ed1883-b408-49a8-8db1-8bd43a434848_88:
+----> list_task:6fcce745-c644-4fa0-95c4-1ffa5bd650c0_1:
+----> list_task:cf882310-0c13-4c20-b4bb-5258257cb34b_99:
+----> list_task:b9b4941f-b25e-46da-be7e-b560a78a68b6_91:
+----> list_task:821a5159-40a6-44ca-b88d-c6b3e06cdd9e_98:
+----> list_task:588984aa-c628-40e3-b28c-5962f3d4d96f_89:
+
+----------------------------------------> list_task_result:
+----> list_task_result:0ba8bfa5-22d7-41c2-873a-d7e4393533a4_33:
+----> list_task_result:395d9eed-f89b-486c-b340-fcdeebdd5f22_78:
+----> list_task_result:3b6af472-ee3d-4484-b9fb-fa2ea02208df_65:
+----> list_task_result:2238e578-6bed-4807-a674-d28953f3d534_63:
+----> list_task_result:6b5151d4-678f-46cf-b3a6-1c2b235b39b6_49:
+----> list_task_result:811340f7-873c-40f1-bcc2-7f84637112cb_47:
+----> list_task_result:eeaba33b-692f-4461-b505-c60b7500d401_56:
+----> list_task_result:6d073962-9e25-45d4-a97e-6bb72fe60eb2_41:
+----> list_task_result:84f86afd-eb40-4803-b1f3-a1861244d40d_71:
+----> list_task_result:c461fd9f-8fc6-4fff-81bb-8fa9e015b751_51:
+----> list_task_result:1f87087a-4863-46dc-a417-5375288ab0af_17:
+----> list_task_result:215bbb16-f77a-4107-b7d9-99c78fa73f79_28:
+----> list_task_result:8bd82cff-36f2-46a1-a59f-ba7e6de9802f_68:
+----> list_task_result:bbfabbb6-7c5e-4c1a-ad7d-c5343285e08f_22:
+----> list_task_result:3d9168ee-e27b-48b1-9c9c-44c5faab0f97_82:
+----> list_task_result:b7df79af-8fe3-4a99-9f13-56afc6b4933c_60:
+----> list_task_result:dcafffdf-2fbd-496a-888d-aea0e5ad2414_67:
+----> list_task_result:5a39b030-da64-4624-ac4a-ae36661ed6e3_2:
+----> list_task_result:4a63cbbd-e9b0-4438-9165-15c8c7e057bf_59:
+----> list_task_result:44949c03-3d74-43c0-b76f-c4def07cdb59_14:
+----> list_task_result:411fd657-57bb-47b4-bf2e-36933c53ad70_58:
+----> list_task_result:b25696a3-cbc8-4610-882b-9ab153c610c0_57:
+----> list_task_result:bd835aa8-9f5a-4202-8b59-6ee5be9396d7_21:
+----> list_task_result:043bdc01-763e-4ef6-8382-dcacfcd5c121_44:
+----> list_task_result:7fbd5162-eb41-4cbb-9ebe-44ce404f6dcc_80:
+----> list_task_result:b8fd2d7b-bcdf-4384-939b-3a22f7be534f_81:
+----> list_task_result:56bedd4d-3675-4a71-88e4-caef268200d6_4:
+----> list_task_result:71988862-9be8-4ad9-b2ac-432d56594f50_31:
+----> list_task_result:c3a0712c-3c07-4e6b-afc7-c79161ed156c_6:
+----> list_task_result:523888ee-162e-4358-b554-f578552253d6_83:
+----> list_task_result:3481386a-1be3-40dd-acaf-85be6d0b3615_79:
+----> list_task_result:d9bc14ba-8c58-43a5-bb6d-a2c92cdd5cb3_25:
+----> list_task_result:be0c80a3-ab88-4798-a1fb-0e8ef6bd4f3a_35:
+----> list_task_result:a5c79561-74e2-4a9f-9a75-28baaacbc278_36:
+----> list_task_result:0822af4e-9bb2-4fc8-ae72-fe4fa54da5d2_61:
+----> list_task_result:c7f7d76b-fa98-420f-967d-40ce6304f7fb_39:
+----> list_task_result:55a18ee4-22d3-449b-a4b3-b511f1537e4d_73:
+----> list_task_result:d122e444-11ca-427f-aa5f-8fccc5c2f60c_77:
+----> list_task_result:d09270b8-bc48-487a-9fbd-8551fa65e64d_84:
+----> list_task_result:673c1b7c-f84d-47d1-96dc-0b2ad92e5412_30:
+----> list_task_result:13f71472-cee6-4771-8088-8d7771cfb2e4_76:
+----> list_task_result:9f28c5b3-963d-4c61-90b2-61adbc19e412_10:
+----> list_task_result:aa43b2e6-055d-4f92-a459-f31bdf0787f6_74:
+----> list_task_result:fa63169a-b6ed-4bae-b46a-517d509befbc_11:
+----> list_task_result:a2e214f6-fd6b-4150-b032-b310eba9881e_54:
+----> list_task_result:5753ec2b-b0bc-4b5f-ab1d-79f7061bb553_45:
+----> list_task_result:b3f129c0-c2ec-4adb-aa46-e51a1e048835_3:
+----> list_task_result:5be483e3-36c6-4e9b-8bc4-20f42e3db391_24:
+----> list_task_result:bcbac83c-f853-4308-a6ac-97ab7dbdf405_32:
+----> list_task_result:28eeaab5-0803-4051-a1cc-a94f2a1eb4a0_18:
+----> list_task_result:d42639ce-9cf7-4c77-9c1b-3e2c845a85c8_43:
+----> list_task_result:d074f9a3-9332-42ea-be5f-2cf4226ffb17_75:
+----> list_task_result:cc095c27-1ae5-4090-a986-c00e5210e0f7_85:
+----> list_task_result:0043e976-11dd-45a7-ae40-8ce8662ce5c0_38:
+----> list_task_result:29920f63-40fd-4852-abaa-f2d77fb2380f_40:
+----> list_task_result:67bfca9f-fc41-4e7d-867f-406f5dcad4f1_5:
+----> list_task_result:5e0e969b-5a7c-4879-a4b8-cc446646e89b_70:
+----> list_task_result:6447511b-025b-4e9c-98e7-af2ef45c5727_53:
+----> list_task_result:437ca9d5-16a5-451b-a855-f560a8482d78_52:
+----> list_task_result:55009786-241b-40ef-8c4e-d0085376053a_23:
+----> list_task_result:858f3829-2e0c-416c-abbc-ec063694ff45_62:
+----> list_task_result:86f5cfbd-93a7-433f-9ab0-97c494506fa1_48:
+----> list_task_result:c3e5967b-1951-4fc7-9372-343eb6998726_1:
+----> list_task_result:8a4cd877-decc-47a7-969d-dc0d7440a0cb_72:
+----> list_task_result:0b2dea03-9852-47c3-a874-4ba263406f70_13:
+----> list_task_result:5e4d086e-d289-4221-ac23-b802c690c1e9_69:
+----> list_task_result:3a2994f4-a2d4-4754-9796-b86c40c84143_42:
+----> list_task_result:65d0d798-66ff-480b-9802-0e6c18b4424a_26:
+----> list_task_result:179491a1-b1e5-4694-8bdc-79fb84a498ac_19:
+----> list_task_result:a6d13f34-028e-4a53-afe0-49462b26ecf1_8:
+----> list_task_result:460bcbf2-1231-4cf4-9428-2919163272df_46:
+----> list_task_result:94c17b81-bbdd-4327-8d28-bfbfae6a6a1e_64:
+----> list_task_result:c19f7daa-ac8d-4b4d-8ad6-59868f788df8_9:
+----> list_task_result:0275f75b-5fac-491b-b60b-90d45bc08c75_20:
+----> list_task_result:4fa1bd83-786f-451a-a508-a0bb5b647189_66:
+----> list_task_result:30d5b320-4305-4d5b-94ce-0b696c9e5790_27:
+----> list_task_result:773882a4-e448-4023-a364-26a1caa1aad1_15:
+----> list_task_result:4f1944f6-1c46-4698-973a-4f1d2463b79c_55:
+----> list_task_result:53dbd2af-3053-45c4-bb4f-4969ded68607_12:
+----> list_task_result:19b34df9-8beb-4878-b3a4-f3b7327d421a_86:
+----> list_task_result:393b8918-4b5c-4e33-973a-4029a3962551_29:
+----> list_task_result:de58f9e4-eea6-4c44-bd61-ed9c3e13d96e_34:
+----> list_task_result:e91baf9a-43e3-4bc4-a707-be14419bb3c3_16:
+----> list_task_result:da6f26c5-dace-4daa-a15b-afbf461363ca_50:
+----> list_task_result:7d093def-1ab2-49dc-a62e-7f6c786f68d9_37:
+----> list_task_result:1bdd403e-feb4-4587-9a39-d72d52600cc5_7:
+
+----------------------------------------> list_task_result_streaming:
+----> list_task_result_streaming:08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1:
+
+
+################################################## python3 rq_monitor.py, details
+
+The Redis Queue Manager is initialized.
+
+----------------------------------------> Test: ping
+True
+
+----------------------------------------> Queue Info:
+{'pending': 14, 'completed': 493, 'failed': 335}
+
+----------------------------------------> Clients and Servers:
+----------> Clients:
+b'{"client_id": "client_3284", "timestamp": "2026-01-04 10:52:44.247085-08:00"}'
+b'{"client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.638358-08:00"}'
+b'{"client_id": "client_8987", "timestamp": "2026-01-04 10:32:47.052247-08:00"}'
+b'{"client_id": "client_961", "timestamp": "2026-01-04 10:07:17.232791-08:00"}'
+b'{"client_id": "client_7920", "timestamp": "2026-01-04 10:07:01.601270-08:00"}'
+b'{"client_id": "client_4461", "timestamp": "2026-01-04 09:54:51.428782-08:00"}'
+b'{"client_id": "client_385", "timestamp": "2026-01-04 09:53:19.793511-08:00"}'
+b'{"client_id": "client_9952", "timestamp": "2026-01-04 09:51:14.800639-08:00"}'
+b'{"client_id": "client_6154", "timestamp": "2026-01-04 09:50:55.041223-08:00"}'
+b'{"client_id": "client_4223", "timestamp": "2026-01-04 09:26:25.241928-08:00"}'
+b'{"client_id": "client_3861", "timestamp": "2026-01-04 09:25:46.633569-08:00"}'
+b'{"client_id": "client_4481", "timestamp": "2026-01-04 09:24:30.654318-08:00"}'
+b'{"client_id": "client_7726", "timestamp": "2026-01-04 09:16:03.854948-08:00"}'
+b'{"client_id": "client_842", "timestamp": "2026-01-04 09:15:55.958417-08:00"}'
+b'{"client_id": "client_5482", "timestamp": "2026-01-04 09:15:32.895640-08:00"}'
+b'{"client_id": "client_3177", "timestamp": "2026-01-04 09:15:27.640590-08:00"}'
+b'{"client_id": "client_8030", "timestamp": "2026-01-04 09:14:55.760158-08:00"}'
+----------> Servers:
+b'{"server_id": "server_1995", "timestamp": "2026-01-04 10:52:04.894830-08:00"}'
+b'{"server_id": "server_5319", "timestamp": "2026-01-04 09:53:11.419885-08:00"}'
+b'{"server_id": "server_2714", "timestamp": "2026-01-04 09:53:06.784548-08:00"}'
+b'{"server_id": "server_980", "timestamp": "2026-01-04 09:42:04.541822-08:00"}'
+b'{"server_id": "server_4952", "timestamp": "2026-01-04 09:41:58.095932-08:00"}'
+b'{"server_id": "server_8795", "timestamp": "2026-01-04 09:14:49.907689-08:00"}'
+b'{"server_id": "server_2874", "timestamp": "2026-01-04 09:14:47.250026-08:00"}'
+
+----------------------------------------> list_task:
+----> list_task:99375daf-33a1-4c9a-8a90-549236162bb1_92:
+b'{"id": "99375daf-33a1-4c9a-8a90-549236162bb1_92", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.687606-08:00", "input": "s3://my-bucket/my-input-file-92.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:2f2c2a03-bcf5-4c60-b08c-8898ad4cb212_96:
+b'{"id": "2f2c2a03-bcf5-4c60-b08c-8898ad4cb212_96", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.688630-08:00", "input": "s3://my-bucket/my-input-file-96.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:4765fd68-57c2-4a0b-93f3-56af55248f5e_90:
+b'{"id": "4765fd68-57c2-4a0b-93f3-56af55248f5e_90", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.687076-08:00", "input": "s3://my-bucket/my-input-file-90.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:22cd5f85-f17f-4b2b-be7a-c8e1488f91c1_94:
+b'{"id": "22cd5f85-f17f-4b2b-be7a-c8e1488f91c1_94", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.688119-08:00", "input": "s3://my-bucket/my-input-file-94.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:950d4344-1148-4748-9a7e-202a5fe35fc4_93:
+b'{"id": "950d4344-1148-4748-9a7e-202a5fe35fc4_93", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.687865-08:00", "input": "s3://my-bucket/my-input-file-93.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:da2e8785-724b-44ba-ac05-417ac11a1839_95:
+b'{"id": "da2e8785-724b-44ba-ac05-417ac11a1839_95", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.688375-08:00", "input": "s3://my-bucket/my-input-file-95.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:76650f46-f1b6-4ccd-a5c5-dc58ee3d10b5_100:
+b'{"id": "76650f46-f1b6-4ccd-a5c5-dc58ee3d10b5_100", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.689672-08:00", "input": "s3://my-bucket/my-input-file-100.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:875067f6-bd31-4d7c-b0af-5c4c52fbbc7d_97:
+b'{"id": "875067f6-bd31-4d7c-b0af-5c4c52fbbc7d_97", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.688891-08:00", "input": "s3://my-bucket/my-input-file-97.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:b6ed1883-b408-49a8-8db1-8bd43a434848_88:
+b'{"id": "b6ed1883-b408-49a8-8db1-8bd43a434848_88", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.686534-08:00", "input": "s3://my-bucket/my-input-file-88.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:6fcce745-c644-4fa0-95c4-1ffa5bd650c0_1:
+b'{"id": "6fcce745-c644-4fa0-95c4-1ffa5bd650c0_1", "client_id": "client_3284", "timestamp": "2026-01-04 10:52:44.274775-08:00", "input": "s3://my-bucket/my-input-file-1.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:cf882310-0c13-4c20-b4bb-5258257cb34b_99:
+b'{"id": "cf882310-0c13-4c20-b4bb-5258257cb34b_99", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.689407-08:00", "input": "s3://my-bucket/my-input-file-99.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:b9b4941f-b25e-46da-be7e-b560a78a68b6_91:
+b'{"id": "b9b4941f-b25e-46da-be7e-b560a78a68b6_91", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.687336-08:00", "input": "s3://my-bucket/my-input-file-91.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:821a5159-40a6-44ca-b88d-c6b3e06cdd9e_98:
+b'{"id": "821a5159-40a6-44ca-b88d-c6b3e06cdd9e_98", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.689150-08:00", "input": "s3://my-bucket/my-input-file-98.txt", "status": "pending", "output": "", "server_id": ""}'
+----> list_task:588984aa-c628-40e3-b28c-5962f3d4d96f_89:
+b'{"id": "588984aa-c628-40e3-b28c-5962f3d4d96f_89", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.686816-08:00", "input": "s3://my-bucket/my-input-file-89.txt", "status": "pending", "output": "", "server_id": ""}'
+
+----------------------------------------> list_task_result:
+----> list_task_result:0ba8bfa5-22d7-41c2-873a-d7e4393533a4_33:
+b'{"id": "0ba8bfa5-22d7-41c2-873a-d7e4393533a4_33", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.672091-08:00", "input": "s3://my-bucket/my-input-file-33.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-33.txt", "server_id": "server_1995"}'
+----> list_task_result:395d9eed-f89b-486c-b340-fcdeebdd5f22_78:
+b'{"id": "395d9eed-f89b-486c-b340-fcdeebdd5f22_78", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.683837-08:00", "input": "s3://my-bucket/my-input-file-78.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-78.txt", "server_id": "server_1995"}'
+----> list_task_result:3b6af472-ee3d-4484-b9fb-fa2ea02208df_65:
+b'{"id": "3b6af472-ee3d-4484-b9fb-fa2ea02208df_65", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.680345-08:00", "input": "s3://my-bucket/my-input-file-65.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-65.txt", "server_id": "server_1995"}'
+----> list_task_result:2238e578-6bed-4807-a674-d28953f3d534_63:
+b'{"id": "2238e578-6bed-4807-a674-d28953f3d534_63", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.679824-08:00", "input": "s3://my-bucket/my-input-file-63.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-63.txt", "server_id": "server_1995"}'
+----> list_task_result:6b5151d4-678f-46cf-b3a6-1c2b235b39b6_49:
+b'{"id": "6b5151d4-678f-46cf-b3a6-1c2b235b39b6_49", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.676237-08:00", "input": "s3://my-bucket/my-input-file-49.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-49.txt", "server_id": "server_1995"}'
+----> list_task_result:811340f7-873c-40f1-bcc2-7f84637112cb_47:
+b'{"id": "811340f7-873c-40f1-bcc2-7f84637112cb_47", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.675705-08:00", "input": "s3://my-bucket/my-input-file-47.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-47.txt", "server_id": "server_1995"}'
+----> list_task_result:eeaba33b-692f-4461-b505-c60b7500d401_56:
+b'{"id": "eeaba33b-692f-4461-b505-c60b7500d401_56", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.678005-08:00", "input": "s3://my-bucket/my-input-file-56.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-56.txt", "server_id": "server_1995"}'
+----> list_task_result:6d073962-9e25-45d4-a97e-6bb72fe60eb2_41:
+b'{"id": "6d073962-9e25-45d4-a97e-6bb72fe60eb2_41", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.674130-08:00", "input": "s3://my-bucket/my-input-file-41.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-41.txt", "server_id": "server_1995"}'
+----> list_task_result:84f86afd-eb40-4803-b1f3-a1861244d40d_71:
+b'{"id": "84f86afd-eb40-4803-b1f3-a1861244d40d_71", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.681921-08:00", "input": "s3://my-bucket/my-input-file-71.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-71.txt", "server_id": "server_1995"}'
+----> list_task_result:c461fd9f-8fc6-4fff-81bb-8fa9e015b751_51:
+b'{"id": "c461fd9f-8fc6-4fff-81bb-8fa9e015b751_51", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.676749-08:00", "input": "s3://my-bucket/my-input-file-51.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-51.txt", "server_id": "server_1995"}'
+----> list_task_result:1f87087a-4863-46dc-a417-5375288ab0af_17:
+b'{"id": "1f87087a-4863-46dc-a417-5375288ab0af_17", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.667902-08:00", "input": "s3://my-bucket/my-input-file-17.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-17.txt", "server_id": "server_1995"}'
+----> list_task_result:215bbb16-f77a-4107-b7d9-99c78fa73f79_28:
+b'{"id": "215bbb16-f77a-4107-b7d9-99c78fa73f79_28", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.670766-08:00", "input": "s3://my-bucket/my-input-file-28.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-28.txt", "server_id": "server_1995"}'
+----> list_task_result:8bd82cff-36f2-46a1-a59f-ba7e6de9802f_68:
+b'{"id": "8bd82cff-36f2-46a1-a59f-ba7e6de9802f_68", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.681141-08:00", "input": "s3://my-bucket/my-input-file-68.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-68.txt", "server_id": "server_1995"}'
+----> list_task_result:bbfabbb6-7c5e-4c1a-ad7d-c5343285e08f_22:
+b'{"id": "bbfabbb6-7c5e-4c1a-ad7d-c5343285e08f_22", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.669168-08:00", "input": "s3://my-bucket/my-input-file-22.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-22.txt", "server_id": "server_1995"}'
+----> list_task_result:3d9168ee-e27b-48b1-9c9c-44c5faab0f97_82:
+b'{"id": "3d9168ee-e27b-48b1-9c9c-44c5faab0f97_82", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.684889-08:00", "input": "s3://my-bucket/my-input-file-82.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-82.txt", "server_id": "server_1995"}'
+----> list_task_result:b7df79af-8fe3-4a99-9f13-56afc6b4933c_60:
+b'{"id": "b7df79af-8fe3-4a99-9f13-56afc6b4933c_60", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.679032-08:00", "input": "s3://my-bucket/my-input-file-60.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-60.txt", "server_id": "server_1995"}'
+----> list_task_result:dcafffdf-2fbd-496a-888d-aea0e5ad2414_67:
+b'{"id": "dcafffdf-2fbd-496a-888d-aea0e5ad2414_67", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.680881-08:00", "input": "s3://my-bucket/my-input-file-67.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-67.txt", "server_id": "server_1995"}'
+----> list_task_result:5a39b030-da64-4624-ac4a-ae36661ed6e3_2:
+b'{"id": "5a39b030-da64-4624-ac4a-ae36661ed6e3_2", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.663815-08:00", "input": "s3://my-bucket/my-input-file-2.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-2.txt", "server_id": "server_1995"}'
+----> list_task_result:4a63cbbd-e9b0-4438-9165-15c8c7e057bf_59:
+b'{"id": "4a63cbbd-e9b0-4438-9165-15c8c7e057bf_59", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.678762-08:00", "input": "s3://my-bucket/my-input-file-59.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-59.txt", "server_id": "server_1995"}'
+----> list_task_result:44949c03-3d74-43c0-b76f-c4def07cdb59_14:
+b'{"id": "44949c03-3d74-43c0-b76f-c4def07cdb59_14", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.667093-08:00", "input": "s3://my-bucket/my-input-file-14.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-14.txt", "server_id": "server_1995"}'
+----> list_task_result:411fd657-57bb-47b4-bf2e-36933c53ad70_58:
+b'{"id": "411fd657-57bb-47b4-bf2e-36933c53ad70_58", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.678509-08:00", "input": "s3://my-bucket/my-input-file-58.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-58.txt", "server_id": "server_1995"}'
+----> list_task_result:b25696a3-cbc8-4610-882b-9ab153c610c0_57:
+b'{"id": "b25696a3-cbc8-4610-882b-9ab153c610c0_57", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.678259-08:00", "input": "s3://my-bucket/my-input-file-57.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-57.txt", "server_id": "server_1995"}'
+----> list_task_result:bd835aa8-9f5a-4202-8b59-6ee5be9396d7_21:
+b'{"id": "bd835aa8-9f5a-4202-8b59-6ee5be9396d7_21", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.668918-08:00", "input": "s3://my-bucket/my-input-file-21.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-21.txt", "server_id": "server_1995"}'
+----> list_task_result:043bdc01-763e-4ef6-8382-dcacfcd5c121_44:
+b'{"id": "043bdc01-763e-4ef6-8382-dcacfcd5c121_44", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.674903-08:00", "input": "s3://my-bucket/my-input-file-44.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-44.txt", "server_id": "server_1995"}'
+----> list_task_result:7fbd5162-eb41-4cbb-9ebe-44ce404f6dcc_80:
+b'{"id": "7fbd5162-eb41-4cbb-9ebe-44ce404f6dcc_80", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.684364-08:00", "input": "s3://my-bucket/my-input-file-80.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-80.txt", "server_id": "server_1995"}'
+----> list_task_result:b8fd2d7b-bcdf-4384-939b-3a22f7be534f_81:
+b'{"id": "b8fd2d7b-bcdf-4384-939b-3a22f7be534f_81", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.684630-08:00", "input": "s3://my-bucket/my-input-file-81.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-81.txt", "server_id": "server_1995"}'
+----> list_task_result:56bedd4d-3675-4a71-88e4-caef268200d6_4:
+b'{"id": "56bedd4d-3675-4a71-88e4-caef268200d6_4", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.664413-08:00", "input": "s3://my-bucket/my-input-file-4.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-4.txt", "server_id": "server_1995"}'
+----> list_task_result:71988862-9be8-4ad9-b2ac-432d56594f50_31:
+b'{"id": "71988862-9be8-4ad9-b2ac-432d56594f50_31", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.671572-08:00", "input": "s3://my-bucket/my-input-file-31.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-31.txt", "server_id": "server_1995"}'
+----> list_task_result:c3a0712c-3c07-4e6b-afc7-c79161ed156c_6:
+b'{"id": "c3a0712c-3c07-4e6b-afc7-c79161ed156c_6", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.664953-08:00", "input": "s3://my-bucket/my-input-file-6.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-6.txt", "server_id": "server_1995"}'
+----> list_task_result:523888ee-162e-4358-b554-f578552253d6_83:
+b'{"id": "523888ee-162e-4358-b554-f578552253d6_83", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.685152-08:00", "input": "s3://my-bucket/my-input-file-83.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-83.txt", "server_id": "server_1995"}'
+----> list_task_result:3481386a-1be3-40dd-acaf-85be6d0b3615_79:
+b'{"id": "3481386a-1be3-40dd-acaf-85be6d0b3615_79", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.684101-08:00", "input": "s3://my-bucket/my-input-file-79.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-79.txt", "server_id": "server_1995"}'
+----> list_task_result:d9bc14ba-8c58-43a5-bb6d-a2c92cdd5cb3_25:
+b'{"id": "d9bc14ba-8c58-43a5-bb6d-a2c92cdd5cb3_25", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.669970-08:00", "input": "s3://my-bucket/my-input-file-25.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-25.txt", "server_id": "server_1995"}'
+----> list_task_result:be0c80a3-ab88-4798-a1fb-0e8ef6bd4f3a_35:
+b'{"id": "be0c80a3-ab88-4798-a1fb-0e8ef6bd4f3a_35", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.672604-08:00", "input": "s3://my-bucket/my-input-file-35.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-35.txt", "server_id": "server_1995"}'
+----> list_task_result:a5c79561-74e2-4a9f-9a75-28baaacbc278_36:
+b'{"id": "a5c79561-74e2-4a9f-9a75-28baaacbc278_36", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.672851-08:00", "input": "s3://my-bucket/my-input-file-36.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-36.txt", "server_id": "server_1995"}'
+----> list_task_result:0822af4e-9bb2-4fc8-ae72-fe4fa54da5d2_61:
+b'{"id": "0822af4e-9bb2-4fc8-ae72-fe4fa54da5d2_61", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.679302-08:00", "input": "s3://my-bucket/my-input-file-61.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-61.txt", "server_id": "server_1995"}'
+----> list_task_result:c7f7d76b-fa98-420f-967d-40ce6304f7fb_39:
+b'{"id": "c7f7d76b-fa98-420f-967d-40ce6304f7fb_39", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.673606-08:00", "input": "s3://my-bucket/my-input-file-39.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-39.txt", "server_id": "server_1995"}'
+----> list_task_result:55a18ee4-22d3-449b-a4b3-b511f1537e4d_73:
+b'{"id": "55a18ee4-22d3-449b-a4b3-b511f1537e4d_73", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.682476-08:00", "input": "s3://my-bucket/my-input-file-73.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-73.txt", "server_id": "server_1995"}'
+----> list_task_result:d122e444-11ca-427f-aa5f-8fccc5c2f60c_77:
+b'{"id": "d122e444-11ca-427f-aa5f-8fccc5c2f60c_77", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.683569-08:00", "input": "s3://my-bucket/my-input-file-77.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-77.txt", "server_id": "server_1995"}'
+----> list_task_result:d09270b8-bc48-487a-9fbd-8551fa65e64d_84:
+b'{"id": "d09270b8-bc48-487a-9fbd-8551fa65e64d_84", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.685422-08:00", "input": "s3://my-bucket/my-input-file-84.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-84.txt", "server_id": "server_1995"}'
+----> list_task_result:673c1b7c-f84d-47d1-96dc-0b2ad92e5412_30:
+b'{"id": "673c1b7c-f84d-47d1-96dc-0b2ad92e5412_30", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.671294-08:00", "input": "s3://my-bucket/my-input-file-30.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-30.txt", "server_id": "server_1995"}'
+----> list_task_result:13f71472-cee6-4771-8088-8d7771cfb2e4_76:
+b'{"id": "13f71472-cee6-4771-8088-8d7771cfb2e4_76", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.683289-08:00", "input": "s3://my-bucket/my-input-file-76.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-76.txt", "server_id": "server_1995"}'
+----> list_task_result:9f28c5b3-963d-4c61-90b2-61adbc19e412_10:
+b'{"id": "9f28c5b3-963d-4c61-90b2-61adbc19e412_10", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.666023-08:00", "input": "s3://my-bucket/my-input-file-10.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-10.txt", "server_id": "server_1995"}'
+----> list_task_result:aa43b2e6-055d-4f92-a459-f31bdf0787f6_74:
+b'{"id": "aa43b2e6-055d-4f92-a459-f31bdf0787f6_74", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.682752-08:00", "input": "s3://my-bucket/my-input-file-74.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-74.txt", "server_id": "server_1995"}'
+----> list_task_result:fa63169a-b6ed-4bae-b46a-517d509befbc_11:
+b'{"id": "fa63169a-b6ed-4bae-b46a-517d509befbc_11", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.666292-08:00", "input": "s3://my-bucket/my-input-file-11.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-11.txt", "server_id": "server_1995"}'
+----> list_task_result:a2e214f6-fd6b-4150-b032-b310eba9881e_54:
+b'{"id": "a2e214f6-fd6b-4150-b032-b310eba9881e_54", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.677502-08:00", "input": "s3://my-bucket/my-input-file-54.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-54.txt", "server_id": "server_1995"}'
+----> list_task_result:5753ec2b-b0bc-4b5f-ab1d-79f7061bb553_45:
+b'{"id": "5753ec2b-b0bc-4b5f-ab1d-79f7061bb553_45", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.675166-08:00", "input": "s3://my-bucket/my-input-file-45.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-45.txt", "server_id": "server_1995"}'
+----> list_task_result:b3f129c0-c2ec-4adb-aa46-e51a1e048835_3:
+b'{"id": "b3f129c0-c2ec-4adb-aa46-e51a1e048835_3", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.664131-08:00", "input": "s3://my-bucket/my-input-file-3.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-3.txt", "server_id": "server_1995"}'
+----> list_task_result:5be483e3-36c6-4e9b-8bc4-20f42e3db391_24:
+b'{"id": "5be483e3-36c6-4e9b-8bc4-20f42e3db391_24", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.669691-08:00", "input": "s3://my-bucket/my-input-file-24.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-24.txt", "server_id": "server_1995"}'
+----> list_task_result:bcbac83c-f853-4308-a6ac-97ab7dbdf405_32:
+b'{"id": "bcbac83c-f853-4308-a6ac-97ab7dbdf405_32", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.671837-08:00", "input": "s3://my-bucket/my-input-file-32.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-32.txt", "server_id": "server_1995"}'
+----> list_task_result:28eeaab5-0803-4051-a1cc-a94f2a1eb4a0_18:
+b'{"id": "28eeaab5-0803-4051-a1cc-a94f2a1eb4a0_18", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.668146-08:00", "input": "s3://my-bucket/my-input-file-18.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-18.txt", "server_id": "server_1995"}'
+----> list_task_result:d42639ce-9cf7-4c77-9c1b-3e2c845a85c8_43:
+b'{"id": "d42639ce-9cf7-4c77-9c1b-3e2c845a85c8_43", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.674647-08:00", "input": "s3://my-bucket/my-input-file-43.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-43.txt", "server_id": "server_1995"}'
+----> list_task_result:d074f9a3-9332-42ea-be5f-2cf4226ffb17_75:
+b'{"id": "d074f9a3-9332-42ea-be5f-2cf4226ffb17_75", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.683024-08:00", "input": "s3://my-bucket/my-input-file-75.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-75.txt", "server_id": "server_1995"}'
+----> list_task_result:cc095c27-1ae5-4090-a986-c00e5210e0f7_85:
+b'{"id": "cc095c27-1ae5-4090-a986-c00e5210e0f7_85", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.685696-08:00", "input": "s3://my-bucket/my-input-file-85.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-85.txt", "server_id": "server_1995"}'
+----> list_task_result:0043e976-11dd-45a7-ae40-8ce8662ce5c0_38:
+b'{"id": "0043e976-11dd-45a7-ae40-8ce8662ce5c0_38", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.673350-08:00", "input": "s3://my-bucket/my-input-file-38.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-38.txt", "server_id": "server_1995"}'
+----> list_task_result:29920f63-40fd-4852-abaa-f2d77fb2380f_40:
+b'{"id": "29920f63-40fd-4852-abaa-f2d77fb2380f_40", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.673860-08:00", "input": "s3://my-bucket/my-input-file-40.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-40.txt", "server_id": "server_1995"}'
+----> list_task_result:67bfca9f-fc41-4e7d-867f-406f5dcad4f1_5:
+b'{"id": "67bfca9f-fc41-4e7d-867f-406f5dcad4f1_5", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.664689-08:00", "input": "s3://my-bucket/my-input-file-5.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-5.txt", "server_id": "server_1995"}'
+----> list_task_result:5e0e969b-5a7c-4879-a4b8-cc446646e89b_70:
+b'{"id": "5e0e969b-5a7c-4879-a4b8-cc446646e89b_70", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.681662-08:00", "input": "s3://my-bucket/my-input-file-70.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-70.txt", "server_id": "server_1995"}'
+----> list_task_result:6447511b-025b-4e9c-98e7-af2ef45c5727_53:
+b'{"id": "6447511b-025b-4e9c-98e7-af2ef45c5727_53", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.677255-08:00", "input": "s3://my-bucket/my-input-file-53.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-53.txt", "server_id": "server_1995"}'
+----> list_task_result:437ca9d5-16a5-451b-a855-f560a8482d78_52:
+b'{"id": "437ca9d5-16a5-451b-a855-f560a8482d78_52", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.677002-08:00", "input": "s3://my-bucket/my-input-file-52.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-52.txt", "server_id": "server_1995"}'
+----> list_task_result:55009786-241b-40ef-8c4e-d0085376053a_23:
+b'{"id": "55009786-241b-40ef-8c4e-d0085376053a_23", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.669423-08:00", "input": "s3://my-bucket/my-input-file-23.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-23.txt", "server_id": "server_1995"}'
+----> list_task_result:858f3829-2e0c-416c-abbc-ec063694ff45_62:
+b'{"id": "858f3829-2e0c-416c-abbc-ec063694ff45_62", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.679568-08:00", "input": "s3://my-bucket/my-input-file-62.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-62.txt", "server_id": "server_1995"}'
+----> list_task_result:86f5cfbd-93a7-433f-9ab0-97c494506fa1_48:
+b'{"id": "86f5cfbd-93a7-433f-9ab0-97c494506fa1_48", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.675968-08:00", "input": "s3://my-bucket/my-input-file-48.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-48.txt", "server_id": "server_1995"}'
+----> list_task_result:c3e5967b-1951-4fc7-9372-343eb6998726_1:
+b'{"id": "c3e5967b-1951-4fc7-9372-343eb6998726_1", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.663404-08:00", "input": "s3://my-bucket/my-input-file-1.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-1.txt", "server_id": "server_1995"}'
+----> list_task_result:8a4cd877-decc-47a7-969d-dc0d7440a0cb_72:
+b'{"id": "8a4cd877-decc-47a7-969d-dc0d7440a0cb_72", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.682206-08:00", "input": "s3://my-bucket/my-input-file-72.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-72.txt", "server_id": "server_1995"}'
+----> list_task_result:0b2dea03-9852-47c3-a874-4ba263406f70_13:
+b'{"id": "0b2dea03-9852-47c3-a874-4ba263406f70_13", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.666831-08:00", "input": "s3://my-bucket/my-input-file-13.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-13.txt", "server_id": "server_1995"}'
+----> list_task_result:5e4d086e-d289-4221-ac23-b802c690c1e9_69:
+b'{"id": "5e4d086e-d289-4221-ac23-b802c690c1e9_69", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.681401-08:00", "input": "s3://my-bucket/my-input-file-69.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-69.txt", "server_id": "server_1995"}'
+----> list_task_result:3a2994f4-a2d4-4754-9796-b86c40c84143_42:
+b'{"id": "3a2994f4-a2d4-4754-9796-b86c40c84143_42", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.674390-08:00", "input": "s3://my-bucket/my-input-file-42.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-42.txt", "server_id": "server_1995"}'
+----> list_task_result:65d0d798-66ff-480b-9802-0e6c18b4424a_26:
+b'{"id": "65d0d798-66ff-480b-9802-0e6c18b4424a_26", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.670248-08:00", "input": "s3://my-bucket/my-input-file-26.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-26.txt", "server_id": "server_1995"}'
+----> list_task_result:179491a1-b1e5-4694-8bdc-79fb84a498ac_19:
+b'{"id": "179491a1-b1e5-4694-8bdc-79fb84a498ac_19", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.668404-08:00", "input": "s3://my-bucket/my-input-file-19.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-19.txt", "server_id": "server_1995"}'
+----> list_task_result:a6d13f34-028e-4a53-afe0-49462b26ecf1_8:
+b'{"id": "a6d13f34-028e-4a53-afe0-49462b26ecf1_8", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.665492-08:00", "input": "s3://my-bucket/my-input-file-8.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-8.txt", "server_id": "server_1995"}'
+----> list_task_result:460bcbf2-1231-4cf4-9428-2919163272df_46:
+b'{"id": "460bcbf2-1231-4cf4-9428-2919163272df_46", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.675437-08:00", "input": "s3://my-bucket/my-input-file-46.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-46.txt", "server_id": "server_1995"}'
+----> list_task_result:94c17b81-bbdd-4327-8d28-bfbfae6a6a1e_64:
+b'{"id": "94c17b81-bbdd-4327-8d28-bfbfae6a6a1e_64", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.680083-08:00", "input": "s3://my-bucket/my-input-file-64.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-64.txt", "server_id": "server_1995"}'
+----> list_task_result:c19f7daa-ac8d-4b4d-8ad6-59868f788df8_9:
+b'{"id": "c19f7daa-ac8d-4b4d-8ad6-59868f788df8_9", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.665757-08:00", "input": "s3://my-bucket/my-input-file-9.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-9.txt", "server_id": "server_1995"}'
+----> list_task_result:0275f75b-5fac-491b-b60b-90d45bc08c75_20:
+b'{"id": "0275f75b-5fac-491b-b60b-90d45bc08c75_20", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.668665-08:00", "input": "s3://my-bucket/my-input-file-20.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-20.txt", "server_id": "server_1995"}'
+----> list_task_result:4fa1bd83-786f-451a-a508-a0bb5b647189_66:
+b'{"id": "4fa1bd83-786f-451a-a508-a0bb5b647189_66", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.680613-08:00", "input": "s3://my-bucket/my-input-file-66.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-66.txt", "server_id": "server_1995"}'
+----> list_task_result:30d5b320-4305-4d5b-94ce-0b696c9e5790_27:
+b'{"id": "30d5b320-4305-4d5b-94ce-0b696c9e5790_27", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.670505-08:00", "input": "s3://my-bucket/my-input-file-27.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-27.txt", "server_id": "server_1995"}'
+----> list_task_result:773882a4-e448-4023-a364-26a1caa1aad1_15:
+b'{"id": "773882a4-e448-4023-a364-26a1caa1aad1_15", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.667370-08:00", "input": "s3://my-bucket/my-input-file-15.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-15.txt", "server_id": "server_1995"}'
+----> list_task_result:4f1944f6-1c46-4698-973a-4f1d2463b79c_55:
+b'{"id": "4f1944f6-1c46-4698-973a-4f1d2463b79c_55", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.677756-08:00", "input": "s3://my-bucket/my-input-file-55.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-55.txt", "server_id": "server_1995"}'
+----> list_task_result:53dbd2af-3053-45c4-bb4f-4969ded68607_12:
+b'{"id": "53dbd2af-3053-45c4-bb4f-4969ded68607_12", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.666564-08:00", "input": "s3://my-bucket/my-input-file-12.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-12.txt", "server_id": "server_1995"}'
+----> list_task_result:19b34df9-8beb-4878-b3a4-f3b7327d421a_86:
+b'{"id": "19b34df9-8beb-4878-b3a4-f3b7327d421a_86", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.685962-08:00", "input": "s3://my-bucket/my-input-file-86.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-86.txt", "server_id": "server_1995"}'
+----> list_task_result:393b8918-4b5c-4e33-973a-4029a3962551_29:
+b'{"id": "393b8918-4b5c-4e33-973a-4029a3962551_29", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.671029-08:00", "input": "s3://my-bucket/my-input-file-29.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-29.txt", "server_id": "server_1995"}'
+----> list_task_result:de58f9e4-eea6-4c44-bd61-ed9c3e13d96e_34:
+b'{"id": "de58f9e4-eea6-4c44-bd61-ed9c3e13d96e_34", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.672349-08:00", "input": "s3://my-bucket/my-input-file-34.txt", "status": "failed", "output": "s3://my-bucket/my-output-file-34.txt", "server_id": "server_1995"}'
+----> list_task_result:e91baf9a-43e3-4bc4-a707-be14419bb3c3_16:
+b'{"id": "e91baf9a-43e3-4bc4-a707-be14419bb3c3_16", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.667634-08:00", "input": "s3://my-bucket/my-input-file-16.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-16.txt", "server_id": "server_1995"}'
+----> list_task_result:da6f26c5-dace-4daa-a15b-afbf461363ca_50:
+b'{"id": "da6f26c5-dace-4daa-a15b-afbf461363ca_50", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.676494-08:00", "input": "s3://my-bucket/my-input-file-50.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-50.txt", "server_id": "server_1995"}'
+----> list_task_result:7d093def-1ab2-49dc-a62e-7f6c786f68d9_37:
+b'{"id": "7d093def-1ab2-49dc-a62e-7f6c786f68d9_37", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.673102-08:00", "input": "s3://my-bucket/my-input-file-37.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-37.txt", "server_id": "server_1995"}'
+----> list_task_result:1bdd403e-feb4-4587-9a39-d72d52600cc5_7:
+b'{"id": "1bdd403e-feb4-4587-9a39-d72d52600cc5_7", "client_id": "client_7662", "timestamp": "2026-01-04 10:52:12.665206-08:00", "input": "s3://my-bucket/my-input-file-7.txt", "status": "completed", "output": "s3://my-bucket/my-output-file-7.txt", "server_id": "server_1995"}'
+
+----------------------------------------> list_task_result_streaming:
+----> list_task_result_streaming:08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1:
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "49-01234567899876543210", "success": true, "last": true}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "48-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "47-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "46-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "45-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "44-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "43-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "42-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "41-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "40-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "39-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "38-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "37-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "36-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "35-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "34-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "33-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "32-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "31-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "30-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "29-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "28-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "27-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "26-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "25-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "24-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "23-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "22-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "21-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "20-01234567899876543210", "success": true, "last": false}'
+b'{"id": "08fac8d0-7c1b-4bab-9cfc-cd93f5d589e8_1", "server_id": "server_5319", "client_id": "client_8987", "chunk": "19-01234567899876543210", "success": true, "last": false}'
+

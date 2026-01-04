@@ -1,1 +1,1 @@
-# redis-queue-llm-inference
+# Redis Queue for AI Inference
