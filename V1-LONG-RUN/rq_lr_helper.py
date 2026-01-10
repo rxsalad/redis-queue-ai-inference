@@ -23,11 +23,12 @@ RENEW_INTERVAL  = 20  # seconds
 RUN_TIME        = 100 # seconds
 
 # Redis keys for task IDs only
+# For multiple applications using the same Redis server, each application may have its own prefix
 LR_ZSET_REQUEST_PENDING    = "lr_zset_requests:pending"   # FIFO queue
 LR_LIST_REQUEST_COMPLETED  = "lr_list_requests:completed" # Optional
 LR_LIST_REQUEST_FAILED     = "lr_list_requests:failed"    # Optional
 
-# Redis keys for tasks and task results (non-streaming and streaming)
+# Redis keys for tasks and task results (long run)
 LR_STRING_TASK             = "lr_string_task"
 
 
@@ -59,9 +60,9 @@ class RedisQueueManager:
     def purge(self):
         try:
             print("⚠️  Be careful: This will flush the Redis queue!")
-            #cmd = input("Continue? yes - flush, others - exit: ").strip().lower()
-            #if cmd != "yes":
-            #    os._exit(0)
+            cmd = input("Continue? yes - flush, others - exit: ").strip().lower()
+            if cmd != "yes":
+                os._exit(0)
 
             self.redis.flushdb()
             print("The Redis queue has been flushed.")
