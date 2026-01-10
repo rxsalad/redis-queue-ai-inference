@@ -1,0 +1,2 @@
+pip install python-dotenv  --break-system-packages
+pip install redis --break-system-packages

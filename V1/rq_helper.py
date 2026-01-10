@@ -44,6 +44,7 @@ class RedisQueueManager:
             r = Redis(
                 host=RQ_HOST, port=RQ_PORT, ssl=True, ssl_check_hostname=False,
                 ssl_ca_certs=RQ_CA_CERT, ssl_certfile=RQ_CLIENT_CERT, ssl_keyfile=RQ_CLIENT_KEY,
+                #ssl_cert_reqs=None,
                 socket_connect_timeout=5,
                 health_check_interval=10,
                 socket_keepalive=True,
