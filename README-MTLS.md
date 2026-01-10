@@ -6,9 +6,9 @@ Next, a server private key and Certificate Signing Request (CSR) are generated f
 
 Finally, a client private key and CSR are created and signed by the same CA, enabling Redis clients to authenticate themselves to the server.
 
-Together, these steps establish encrypted communication and robust, bidirectional authentication between the Redis server and its clients—including frontend applications and backend services—using certificates issued by a trusted internal CA.
+Together, these steps establish encrypted communication and robust, bidirectional authentication between the Redis server and its clients—including frontend applications and backend servers—using certificates issued by a trusted internal CA.
 
-**Redis clients (frontend applications) <- mTLS -> Redis server <- mTLS -> Redis clients (backend services)**
+**Clients (frontend applications)** <-- mTLS --> **Redis server** <-- mTLS --> **Clients (backend servers)**
 
 ## Generate a Certificate Authority (the root CA)
 
