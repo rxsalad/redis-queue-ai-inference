@@ -18,7 +18,7 @@ ls  -ls
 4 -rw-r--r-- 1 root root 1704 Jan  2 02:20 redis-client.key
 ```
 
-Create a .env file in the workspace root to centrally manage access credentials:
+Create a [.env](.env) file in the workspace root to centrally manage access credentials:
 
 ``` shell
 RQ_HOST=rq.rshue.com # Redis server used in this test
@@ -66,11 +66,11 @@ for key in all_keys:                                        # Iterate through ke
     print(f"{key.decode('utf-8')}: {key_type}")
 ```
 
-Redis stores data as key-value pairs, where each key is unique and maps to a value that can be a string, list, hash, sorted set (zset), or other data structures. Let’s explore some of these data types and see how they can be used to build a queue.
+Redis stores data as key-value pairs, where each key is unique and maps to a value that can be a string, list, hash, sorted set (zset), or other data structures. Let’s explore some of these data types and see how they can be used to build a queue. Please refer to [the code](redis_key_concepts.py) for complete examples.
 
 ## Data Type: ZSET
 
-A zset (sorted set) in Redis is a data structure that holds unique elements, each associated with a score. Elements are automatically stored in order of their scores, allowing efficient retrieval by rank. You can quickly access or remove the element with the highest or lowest score. The ranking mechanism is especially useful when re-queuing a failed request in the zset, enabling it to be processed first.
+A zset (sorted set) in Redis is a data structure that holds unique elements, each associated with a score. Elements are automatically stored in order of their scores, allowing efficient retrieval by rank. We can quickly access or remove the element with the highest or lowest score. The ranking mechanism is especially useful when re-queuing a failed request, enabling it to be processed first.
 
 The below example code demonstrates frontend applications sending 3 requests with different scores to a zset, which backend servers then retrieve in order from lowest to highest:
 
@@ -105,7 +105,7 @@ Even under concurrent access from multiple frontend applications and backend ser
 
 ## Data Type: LIST
 
-A list in Redis is an ordered collection of elements, where items are stored in the order they are inserted. It supports efficient insertion and removal from both ends and is automatically removed when it becomes empty. Lists also support blocking operations, allowing clients to wait for elements with a specified timeout. These features make lists well suited for transferring requests and responses between frontend and backend components. By inserting and removing elements at opposite ends of a list, the frontend and backend can implement a streaming pattern, such as streaming tokens in large language models (LLMs).
+A list in Redis is an ordered collection of elements, where items are stored in the order they are inserted. It supports efficient insertion and removal from both ends and is automatically removed when it becomes empty. Lists also support blocking operations, allowing clients to wait for elements with a specified timeout. These features make lists well suited for transferring requests and responses between frontend and backend components. By inserting and removing elements at opposite ends of a list, the frontend and backend can also implement a streaming pattern, such as streaming tokens in large language models (LLMs).
 
 The below example code illustrates how the frontend application sents a request to the backend server using the zset and a list. 
 
@@ -116,7 +116,7 @@ The below example code illustrates how the frontend application sents a request 
 c_request_001 = { "input": "s3://my_bucket/my_input_file.txt", "output": "" }
 
 # Save the request in a list with 1 element - Key: "request_001", Value: [ { "input": "s3://my_bucket/my_input_file.txt", "output": "" } ]
-rs_frontend_application.lpush("request_001", json.dumps( c_request_001 ))
+rs_frontend_application.lpush("request_001", json.dumps(c_request_001))
 rs_frontend_application.expire("request_001", 3600)     # The list is deleted when the TTL expires.
 
 # Enqueue the key - "request_001" to the zset - "request_id_queue"
@@ -143,9 +143,11 @@ if temp is not None:
     print(s_request_001)
 ```
 
-**In Redis, TTL applies per key, not per element.** In this example, the zset’s TTL (60 seconds) is refreshed whenever a request ID is enqueued or dequeued, ensuring that all request IDs expire automatically if the queue becomes inactive.
+The request ID ("request_001") and the request payload are stored using different Redis data types—an element in the zset and a single-element list—because they serve different roles and have distinct lifecycles. If a backend server fails to process a request, the frontend application can safely re-queue the corresponding request_id for retry without duplicating the request payload.
 
-The request list also has a TTL of 3600 seconds, longer than that of the request ID, ensuring the list remains available while its corresponding ID is still active.
+**In Redis, TTL applies per key, not per element.** In this example, the zset’s TTL (60 seconds) is refreshed whenever a request ID is enqueued or dequeued. This ensures that all request IDs are automatically expired and cleaned up if the queue becomes inactive.
+
+The request list also has a TTL of 3600 seconds, longer than that of the request ID, ensuring the requests remains available while their corresponding ID are still active.
 
 ## Data Type: STRING
 
