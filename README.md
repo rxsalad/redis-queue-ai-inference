@@ -28,7 +28,7 @@ A custom Redis-based queue (RQ) combines the advantages of both LB and queue-bas
 
 - The Redis server cluster, frontend applications, and backend servers are all deployed within the same region to ensure low-latency access. However, they can be hosted across different cloud providers to optimize costs and leverage the best available offerings.
 
-- The Redis server cluster can be either managed or self-hosted, and may be publicly accessible with an IP whitelist and mTLS, or private. It should also support high availability (HA) and data backup.
+- The Redis cluster can be managed or self-hosted and may be publicly accessible (secured with IP Whitelist and mTLS) or kept private. It should support high availability (HA) and, optionally, data backup based on the scenario. Many managed Redis services from public cloud providers offer these features.
 
 - Task input and output data can be included directly within the requests and responses, which are exchanged via the Redis cluster between frontend applications and backend servers. For larger datasets, the data can be stored in cloud storage, with requests and responses containing only references to the data.
 
@@ -38,7 +38,7 @@ A custom Redis-based queue (RQ) combines the advantages of both LB and queue-bas
 
 - While backend servers continuously pull and process new jobs from the queue based on their available capacity, traffic management and autoscaling are primarily handled by the frontend applications or by dedicated tools such as [KEDA](https://keda.sh/docs/2.18/scalers/redis-lists/) in Kubernetes. By monitoring both application-level metrics and Redis metrics—such as the number of pending jobs—these applications or tools can automatically scale backend servers and, if necessary, reject requests from end users to maintain system stability.
 
-- For long-running tasks that may fail or be interrupted, the queue should provide a built-in retry mechanism, such as lease renewal and re-queuing. In these cases, **high availability** and **data backup** for the Redis cluster are essential to ensure reliability and prevent data loss. Many managed Redis services from public cloud providers offer these features.
+- For long-running tasks that may fail or be interrupted, the queue should provide a built-in retry mechanism, such as lease renewal and re-queuing. 
 
 Before diving into the details of various scenarios, set up a self-managed Redis server with mTLS by following [the setup guide](README-MTLS.md), and familiarize yourself with the basic Redis data types and programmatic access using [the programming guide](README-PA.md).
 
@@ -84,12 +84,10 @@ The backend runs a background thread to periodically update the `update_time` fi
 
 Additional fields can be added to the task string, such as the maximum number of retries, which defines how many interruptions are allowed during task execution, including application or infrastructure errors. Fields can also be included to track how many backend servers have processed the task and to record their execution times.
 
-In this case, the task string contains only metadata, while the task input and output data are managed in cloud storage. To avoid restarting an unfinished task from scratch after an interruption, the backend server should implement task state management:
+The task string should contains only metadata in this solution, while the task input and output data are managed in cloud storage. To avoid restarting an unfinished task from scratch after an interruption, the backend server should also implement task state management:
 
 - Start fresh while pulling a new task.
-- Regularly save and upload the running state to cloud storage during execution.
+- Regularly save and upload the running state—such as checkpoints, steps, or trajectories—to cloud storage during execution.
 - Download and resume from the previous running state if retrieving an unfinished task.
 
-For long-running jobs, a reliable queue service with high availability and data backup is required. Many cloud providers offer managed Redis services that provide these features.
-
-A simpler approach is to use a unique state file in cloud storage for each job to track its execution. The backend updates the file periodically, while the frontend monitors it and triggers a re-queue if an error occurs. This approach can reduce the load on the Redis server and lessen the reliance on optional high availability and data backup, though its effectiveness will need to be validated through real-world project implementation.
+The above design aims to build a highly reliable queue service along with task state management for long running tasks. A simpler approach is to track each job’s execution using a unique state file in cloud storage instead of storing it in Redis. The backend updates the file periodically, while the frontend monitors it and triggers a re-queue if an error occurs. This approach can reduce the load on the Redis server and lessen the reliance on high availability and data backup, though its effectiveness will need to be validated through real-world project implementation.
