@@ -78,14 +78,13 @@ Batch jobs typically run for longer durations, and if a job fails due to errors�
 
 <img src="images/s3.png" alt="s3" width="800" height="330"/>
 
-In this solution, we use a string (e.g., `lr_string_task_001`) to track a task's excution, which is shared and accessed by both the frontend and backend.
+In this solution, we use a string (e.g., `lr_string_task_001`) to track a task's excution, which is shared and accessed by both the frontend and backend. The task string stores only metadata, while the task input and output data are maintained in cloud storage.
 
 The backend runs a background thread to periodically update the `update_time` field in the task string (e.g., every `1` minute) while processing the task in its main thread. The frontend can monitor the task either synchronously or asynchronously. If the update_time is not refreshed within a specified period (e.g., `5` minutes), it indicates that the server processing the task has failed, and the frontend can re-queue the task ID (`001`) into the zset `lr_zset_requests:pending` with its previous priority, allowing it to be processed first.
 
 Additional fields can be added to the task string, such as the maximum number of retries, which defines how many interruptions are allowed during task execution, including application or infrastructure errors. Fields can also be included to track how many backend servers have processed the task and to record their execution times.
 
-The task string should contains only metadata in this solution, while the task input and output data are managed in cloud storage. To avoid restarting an unfinished task from scratch after an interruption, the backend server should also implement task state management:
-
+To avoid restarting an unfinished task from scratch after an interruption, the backend server should also implement task state management:
 - Start fresh while pulling a new task.
 - Regularly save and upload the running state—such as checkpoints, steps, or trajectories—to cloud storage during execution.
 - Download and resume from the previous running state if retrieving an unfinished task.
